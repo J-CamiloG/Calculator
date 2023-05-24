@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="/estilo/estilo.css">
+    <script src="/main.js" defer></script>
+    <title>Calculator // Juan Camilo</title>
+</head>
+<body>
+    <header class="header">
+        <h1>CALCULADORA</h1>
+        <article class="darkMode">
+            <div class="contenedorDarkMode form-check form-switch">
+                <input onclick="darkMode()" class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                <label class="form-check-label" for="flexSwitchCheckDefault">Day Mode</label>
+            </div>
+        </article>
+    </header>
+    <section class="contenedor">
+        <article class="headerCalculadora">
+            <input id="resultado"class="pantalla" type="text" readonly>
+        </article>
+        <article class="teclas">
+            <section class="teclasGrupos">
+                <button class="botones" onclick="agregarNumero(7)">7</button>
+                <button class="botones" onclick="agregarNumero(8)">8</button>
+                <button class="botones" onclick="agregarNumero(9)">9</button>
+                <button class="botones" onclick="borrarNumero()">DEL</button>
+            </section>
+
+            <section class="teclasGrupos">
+                <button class="botones" onclick="agregarNumero(4)">4</button>
+                <button class="botones" onclick="agregarNumero(5)">5</button>   
+                <button class="botones" onclick="agregarNumero(6)">6</button>
+                <button class="botones" onclick="agregarOperacion('-')">-</button>
+            </section>
+
+            <section class="teclasGrupos">
+                <button class="botones" onclick="agregarNumero(1)">1</button>
+                <button class="botones" onclick="agregarNumero(2)">2</button>
+                <button class="botones" onclick="agregarNumero(3)">3</butto>
+                <button class="botones" onclick="agregarOperacion('*')">X</button>
+            </section>
+
+            <section class="teclasGrupos">
+                <button class="botones" onclick="agregarNumero(0)">0</button>
+                <button class="botones" onclick="agregarOperacion('+')">+</button>
+                <button class="botones" onclick="agregarOperacion('/')">/</button>
+                <button class="botones" onclick="agregarDecimal()">.</button>
+            </section>
+
+            <section class="teclasGrupos">
+                <button class="botonLimpiar" onclick="limpiar()">RESET</button>
+                <button class="botonResultado" onclick="calcularResultado()">=</button>
+            </section>
+        </article>
+    </section>
+</body>
+</html>
